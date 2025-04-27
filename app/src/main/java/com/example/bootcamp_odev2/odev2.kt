@@ -28,6 +28,30 @@ class Odev2{
         }
         return aharfi
 
+
+
+    }
+    fun IcAcılar(kenarSayisi : Int): Int{
+        return (kenarSayisi - 2)*180
+
+    }
+    fun GunSayisiBul(gunSayisi : Int){
+        val calismaUcreti= 10*gunSayisi
+        val mesai = (gunSayisi-160)*20
+        val maas = calismaUcreti + mesai
+        return println("maas : ${maas} ")
+
+    }
+    fun KotaUcreti(kotaMiktari : Int){
+        var ucret = 0
+        if (kotaMiktari <= 50){
+            ucret += 100
+        }else{
+            ucret = 100 + (kotaMiktari-50)*4
+
+        }
+        return println("Ücret : ${ucret}")
+
     }
 
 
@@ -49,5 +73,11 @@ fun main() {
 
     val aharfisayisi= o.KacHarf("Darende")
     println("sonuç: ${aharfisayisi}")
+
+    val icAcı = o.IcAcılar(4)
+    println("sonuç : ${icAcı}")
+
+    o.GunSayisiBul(200)
+    o.KotaUcreti(55)
 
 }
